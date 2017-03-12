@@ -1,0 +1,7 @@
+#忽略某些文件或者是文件夹
+*.sln
+*.csproj
+*.suo
+Library/
+Temp/
+
