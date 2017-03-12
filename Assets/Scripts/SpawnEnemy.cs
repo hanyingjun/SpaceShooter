@@ -50,8 +50,20 @@ public class SpawnEnemy : MonoBehaviour
 
     void Spawn(int waveCount)
     {
-        Instantiate(enemies[waveCount], spawnPositions[waveCount].position, spawnPositions[waveCount].rotation);
-        //enemies[waveCount].AddComponent<>();                                        //每生成一个敌人，动态给他添加一个对应当前waveCount的移动脚本
+		//具体克隆的实体对象
+        GameObject go = Instantiate(enemies[waveCount],
+			spawnPositions[waveCount].position, spawnPositions[waveCount].rotation);
+		//对于引用对象先判断是否为空，
+// 		if (go != null)
+// 		{
+// 			//先get组件对象，如果没有再在下面add,防止一个脚本对象上多个同样的脚本，引起不必要的bug
+// 			EnemyMove em = go.GetComponent<EnemyMove>();
+// 			//同样空判断处理
+// 			if (em == null)
+// 			{
+// 				em = go.AddComponent<EnemyMove>();
+// 			}
+// 		}
     }
 
     //public bool DropPowUpItem()

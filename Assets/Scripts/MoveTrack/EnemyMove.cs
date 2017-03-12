@@ -3,7 +3,6 @@ using System.Collections;
 
 public class EnemyMove : MonoBehaviour
 {
-    
     public float speed;
     public float angularSpeed;
     public string componentName = "EnemyMove";
